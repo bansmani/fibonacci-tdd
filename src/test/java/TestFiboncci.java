@@ -1,9 +1,7 @@
-
-
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
+import java.util.Calendar;
 
 public class TestFiboncci {
 
@@ -51,9 +49,21 @@ public class TestFiboncci {
         // adding some more asseertion with bigger value
         int[] output1 = fib.getFibonacciSeries(10);
         Assert.assertEquals(10, output1.length);
-        Assert.assertArrayEquals(new int[]{0,1,1,2,3,5,8,13,21,34}, output1);
+        Assert.assertArrayEquals(new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34}, output1);
     }
 
 
+    @Test
+    public void timecomplexity_shouldbe_linear() {
+        Fibonacci fib = new Fibonacci();
+        long startTime = Calendar.getInstance().getTimeInMillis();
+        //taking around 3 seconds with original
+        int[] fibonacciSeries = fib.getFibonacciSeries(42);
+        long endTime = Calendar.getInstance().getTimeInMillis();
+        System.out.println(endTime - startTime);
+        Assert.assertTrue(" actual time is : " + (endTime - startTime), endTime - startTime < 10);
+
+//        Arrays.stream(fibonacciSeries).forEach(value -> System.out.println(value + ","));
+    }
 
 }
