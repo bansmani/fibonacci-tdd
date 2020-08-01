@@ -4,13 +4,13 @@ import java.util.stream.IntStream;
 
 public class Fibonacci {
 
-    public int[] getFibonacciSeries(Integer count) {
+    public static int[] getFibonacciSeries(Integer count) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
         return IntStream.range(0, count).map(i -> fib(i, map)).toArray();
     }
 
-    private int fib(int num, Map<Integer, Integer> map) {
+    private static int fib(int num, Map<Integer, Integer> map) {
         if (num == 0 || num == 1) return num;
         Integer integer = map.get(num);
         if (integer != null) {
