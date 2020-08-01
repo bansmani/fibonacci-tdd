@@ -34,7 +34,19 @@ public class TestFiboncci {
         Fibonacci fib = new Fibonacci();
         int[] output = fib.getFibonacciSeries(2);
         Assert.assertEquals(2, output.length);
-        Assert.assertArrayEquals(new int[]{0,1}, output);
+        Assert.assertArrayEquals(new int[]{0, 1}, output);
+    }
+
+
+    @Test
+    public void WhenSuppliedMoreThanTwo_ItShouldRetrun_FibonacciSeries() {
+        Fibonacci fib = new Fibonacci();
+
+        int[] output = fib.getFibonacciSeries(3);
+        Assert.assertEquals(3, output.length);
+        Assert.assertArrayEquals(new int[]{0, 1, 1}, output);
+
+
     }
 
 
