@@ -1,8 +1,8 @@
 import java.util.stream.IntStream;
 
-public class TestFb {
+public class Fibonacci {
 
-    public int[] getFib(Integer count) {
+    public int[] getFibonacciSeries(Integer count) {
         return IntStream.range(0, count).map(this::fib).toArray();
     }
 
