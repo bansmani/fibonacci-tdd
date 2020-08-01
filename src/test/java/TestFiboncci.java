@@ -14,5 +14,12 @@ public class TestFiboncci {
         Assert.assertEquals(10, output.length);
     }
 
+    @Test
+    public void WhenSuppliedZeroItShouldRetrunZero() {
+        Fibonacci fib = new Fibonacci();
+        int[] output = fib.getFibonacciSeries(0);
+        System.out.println(output);
+        Assert.assertEquals(1, output.length);
+    }
 
 }
