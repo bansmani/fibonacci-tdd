@@ -22,4 +22,11 @@ public class TestFiboncci {
         Assert.assertEquals(1, output.length);
     }
 
+    @Test
+    public void WhenSuppliedOneItShouldRetrunZeroAndOne() {
+        Fibonacci fib = new Fibonacci();
+        int[] output = fib.getFibonacciSeries(1);
+        Assert.assertArrayEquals(new int[]{0,1}, output);
+    }
+
 }
