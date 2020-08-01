@@ -3,6 +3,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class TestFiboncci {
 
 
@@ -46,8 +48,12 @@ public class TestFiboncci {
         Assert.assertEquals(3, output.length);
         Assert.assertArrayEquals(new int[]{0, 1, 1}, output);
 
-
+        // adding some more asseertion with bigger value
+        int[] output1 = fib.getFibonacciSeries(10);
+        Assert.assertEquals(10, output1.length);
+        Assert.assertArrayEquals(new int[]{0,1,1,2,3,5,8,13,21,34}, output1);
     }
+
 
 
 }
