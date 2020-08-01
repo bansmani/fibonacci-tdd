@@ -15,18 +15,27 @@ public class TestFiboncci {
     }
 
     @Test
-    public void WhenSuppliedZeroItShouldRetrunZero() {
+    public void WhenSuppliedZeroItShouldRetrunZeroElement() {
         Fibonacci fib = new Fibonacci();
         int[] output = fib.getFibonacciSeries(0);
-        System.out.println(output);
-        Assert.assertEquals(1, output.length);
+        Assert.assertEquals(0, output.length);
     }
 
     @Test
-    public void WhenSuppliedOneItShouldRetrunZeroAndOne() {
+    public void WhenSuppliedOne_ItShouldRetrun_OneElement_WithZeroValue() {
         Fibonacci fib = new Fibonacci();
         int[] output = fib.getFibonacciSeries(1);
+        Assert.assertEquals(1, output.length);
+        Assert.assertArrayEquals(new int[]{0}, output);
+    }
+
+    @Test
+    public void WhenSuppliedTwo_ItShouldRetrun_TwoElement_WithOneAandZero() {
+        Fibonacci fib = new Fibonacci();
+        int[] output = fib.getFibonacciSeries(2);
+        Assert.assertEquals(2, output.length);
         Assert.assertArrayEquals(new int[]{0,1}, output);
     }
+
 
 }
